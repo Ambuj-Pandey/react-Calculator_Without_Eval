@@ -24,6 +24,11 @@ function reducer(state, { type, payload }) {
       if (payload.digit === "0" && state.currentOperand === "0") {
         return state
       }
+      if (payload.digit === "." && state.currentOperand == null) { 
+        return{
+          ...state, 
+          currentOperand: `0 ${payload.digit}`
+        } } 
       if (payload.digit === "." && state.currentOperand.includes(".")) {
         return state
       }
@@ -69,7 +74,7 @@ function reducer(state, { type, payload }) {
           currentOperand: null,
         }
       }
-      if (state.previousOperand !== null && state.operation !== null){
+      if (state.currentOperand === null && state.previousOperand !== null && state.operation !== null){
         return {
           ...state,
           currentOperand: state.previousOperand,
