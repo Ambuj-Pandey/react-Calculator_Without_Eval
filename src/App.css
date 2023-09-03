@@ -1,31 +1,54 @@
-.App {
-  text-align: center;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    margin: 0;
+    background: linear-gradient(to right, #8e3deb, #3b27ec);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Calculator-grid{
+    display: grid;
+    margin-top: 2 rem;
+    justify-content: center;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
 }
 
-.App-link {
-  color: #61dafb;
+.span-two{
+    grid-column: span 2;
 }
 
-.heart {
-  color: #ff0000;
+.Ouput{
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-size: 1.5rem;
+    padding: 0.75;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-.small {
-  font-size: 0.75rem;
+.Ouput .PrevOP{
+    color: rgba(255, 255, 255, .75);
+
+}
+
+.Ouput .CurOP{
+    color: rgba(255, 255, 255, 255);
+    font-size: 2.5rem;
+}
+.Calculator-grid > button{
+    background-color: rgba(255, 255, 255, .85);
+    font-size: 1.5rem;
+    border: 1px solid white;
+    outline: none;
+}
+
+.Calculator-grid > button:hover,
+.Calculator-grid > button:focus{
+    background-color: rgba(255, 255, 255, 255);
 }

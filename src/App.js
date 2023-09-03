@@ -2,26 +2,29 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+    <div className='Calculator-grid'>
+      <div className='Ouput'>
+        <div className='PrevOP'>1234*</div>
+        <div className='CurOP'>123</div>
+      </div>
+      <button className='span-two'>AC</button>
+      <button>DEL</button>
+      <button>÷</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>*</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>+</button>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>-</button>
+      <button>.</button>
+      <button>0</button>
+      <button className='span-two'>=</button>
     </div>
   );
 }
